@@ -1,0 +1,14 @@
+waypoint_num: 8
+waypoint0: {x: 0.0, y: 0.0, z: -0.02}
+waypoint1: {x: 14.87, y: -0.79 , z: -2.74}
+waypoint2: {x: 37.68, y: -12.27, z: -1.03}
+waypoint3: {x: 67.52, y: -12.94, z: -0.3}
+waypoint4: {x: 94.3, y: -8.1, z: 0.02}
+#waypoint5: {x: 104.44, y: -15.05, z: -0.02}
+waypoint5: {x: 113.95, y: -35.70, z: -0.34}
+waypoint6: {x: 121.6, y: -67.73, z: -3.83}
+waypoint7: {x: 121.80, y: -96.1, z: -7.39}
+
+
+max_vel: 20
+max_acc: 8
