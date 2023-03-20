@@ -1,14 +1,15 @@
 <launch>
+    <!--trajectory tracking-->
     <node pkg="plan_and_control" type="trajectory_tracking_node" name="geometric_controller_node" output="screen">
         <rosparam command="load" file="$(find plan_and_control)/config/controller_gains.yaml" />      
-
     </node>
 
-    <node pkg="plan_and_control" type="trajectory_publisher_node" name="trajectory_publisher_node" output="screen" >
-        <!--waypoints for trajectory generating-->
+    <!--trajectory replanning-->>
+    <node pkg="plan_and_control" type="trajectory_replan_node" name="trajectory_replan_node" output="screen" >
         <rosparam command="load" file="$(find plan_and_control)/config/waypoints.yaml" />
     </node>
-
+    
+    <!-- visualization -->
     <node pkg="rviz" type="rviz" name="rviz" output="screen"
         args="-d $(find plan_and_control)/rviz/traj.rviz" >
     </node>

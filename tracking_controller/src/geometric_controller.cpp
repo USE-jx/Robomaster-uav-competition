@@ -58,9 +58,9 @@ void GeometricController::computeAttitudeError(const Eigen::Vector3d new_acc,
     desiredAttitude(0) =  yaw_pitch_roll(0);
     desiredAttitude(1) =  yaw_pitch_roll(1);
     desiredAttitude(2) =  yaw_pitch_roll(2);
-    std::cout << "desiredYaw:" << desiredAttitude(2) << std::endl;
+    //std::cout << "desiredYaw:" << desiredAttitude(2) << std::endl;
     //get attitude error and from matrix to vector
     Eigen::Matrix3d attitudeError_m = 0.5 * (attitude_matrix.transpose() * currentAttitude - currentAttitude.transpose() * attitude_matrix);
     attitudeError_v << attitudeError_m(2, 1), attitudeError_m(0, 2), attitudeError_m(1, 0);
-    std::cout << "attitudeError:" << attitudeError_v.transpose() <<std::endl;
+    //std::cout << "attitudeError:" << attitudeError_v.transpose() <<std::endl;
 } 
